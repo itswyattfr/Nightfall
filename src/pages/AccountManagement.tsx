@@ -55,9 +55,12 @@ const AccountManagement = () => {
   return (
     <div className="min-h-screen bg-gray-900 text-white p-8">
       <div className="max-w-4xl mx-auto relative">
-        <button className="absolute right-0 top-0 px-6 py-2 bg-gradient-to-r from-yellow-400 to-yellow-600 rounded-md hover:from-yellow-500 hover:to-yellow-700 transition-colors duration-200 font-semibold">
-          UPGRADE
-        </button>
+        {/* Conditionally render the Upgrade button */}
+        {!user?.nightfallplus && (
+          <button className="absolute right-0 top-0 px-6 py-2 bg-gradient-to-r from-yellow-400 to-yellow-600 rounded-md hover:from-yellow-500 hover:to-yellow-700 transition-colors duration-200 font-semibold">
+            UPGRADE
+          </button>
+        )}
 
         <h1 className="text-3xl font-bold mb-8 bg-gradient-to-r from-purple-400 to-indigo-400 bg-clip-text text-transparent">
           Account Management

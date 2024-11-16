@@ -3,6 +3,10 @@
 @tailwind utilities;
 
 @layer base {
+  *{
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
   html {
     scroll-behavior: smooth;
   }
